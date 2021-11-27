@@ -1,0 +1,31 @@
+{
+  "criteria":{
+    "placed_relocated_block":{
+      "trigger":"minecraft:placed_block",
+      "conditions":{
+        "block":"minecraft:player_head",
+        "item":{
+          "nbt":"{gm4_placement_data:{}}"
+        }
+      }
+    },
+    "placed_wall_relocated_block":{
+      "trigger":"minecraft:placed_block",
+      "conditions":{
+        "block":"minecraft:player_wall_head",
+        "item":{
+          "nbt":"{gm4_placement_data:{}}"
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function":"gm4_placers:place_down/place_relocated_block"
+  },
+  "requirements": [
+    [
+      "placed_relocated_block",
+      "placed_wall_relocated_block"
+    ]
+  ]
+}
